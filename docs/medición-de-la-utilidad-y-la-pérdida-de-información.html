@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 Medición de la utilidad y la pérdida de información | Guía para el Control de Divulgación Estadística en Microdatos</title>
+  <title>Capítulo 9 Medición de la utilidad y la pérdida de información | Ajuste estacional de datos de series temporales económicas y sociales</title>
   <meta name="description" content="Este es un documento central para el trabajo de Control a la Divulgación Estadística de Microdatos en el Instituto Nacional de Estadísticas de Chile." />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 Medición de la utilidad y la pérdida de información | Guía para el Control de Divulgación Estadística en Microdatos" />
+  <meta property="og:title" content="Capítulo 9 Medición de la utilidad y la pérdida de información | Ajuste estacional de datos de series temporales económicas y sociales" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://www.ine.gob.cl/Imagenes/Logo_INE2.png" />
   <meta property="og:description" content="Este es un documento central para el trabajo de Control a la Divulgación Estadística de Microdatos en el Instituto Nacional de Estadísticas de Chile." />
   <meta name="github-repo" content="sdcchile/tallersdc/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Medición de la utilidad y la pérdida de información | Guía para el Control de Divulgación Estadística en Microdatos" />
+  <meta name="twitter:title" content="Capítulo 9 Medición de la utilidad y la pérdida de información | Ajuste estacional de datos de series temporales económicas y sociales" />
   
   <meta name="twitter:description" content="Este es un documento central para el trabajo de Control a la Divulgación Estadística de Microdatos en el Instituto Nacional de Estadísticas de Chile." />
   <meta name="twitter:image" content="https://www.ine.gob.cl/Imagenes/Logo_INE2.png" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Subdepartamento de Investigación Estadística" />
 
 
-<meta name="date" content="2024-04-24" />
+<meta name="date" content="2024-04-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -163,7 +163,7 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">SHORT TITLE HERE</a></li>
+<li class="toc-logo"><a href="./"><img src="Imagenes/Logo_INE2.png"></a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prefacio</a>
@@ -331,7 +331,8 @@ div.csl-indent {
 <li class="chapter" data-level="12" data-path="taller-sdc-video.html"><a href="taller-sdc-video.html"><i class="fa fa-check"></i><b>12</b> Taller SDC Video</a></li>
 <li class="chapter" data-level="" data-path="referencias-1.html"><a href="referencias-1.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/ajusteestacionaline/taller/blob/main/" target="blank">Publicado con bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -341,7 +342,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Guía para el Control de Divulgación Estadística en Microdatos</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Ajuste estacional de datos de series temporales económicas y sociales</a>
           </h1>
         </div>
 
@@ -350,7 +351,7 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="medición-de-la-utilidad-y-la-pérdida-de-información" class="section level1 hasAnchor" number="9">
-<h1><span class="header-section-number">Chapter 9</span> Medición de la utilidad y la pérdida de información<a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#medición-de-la-utilidad-y-la-pérdida-de-información" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Capítulo 9</span> Medición de la utilidad y la pérdida de información<a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#medición-de-la-utilidad-y-la-pérdida-de-información" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Hoy en día, resolver la tensión entre la protección de la información personal y el suministro de datos es realmente un desafío que deben asumir las ONE. En esta situación, tres motivaciones empujan a las ONE a preservar la confidencialidad.</p>
 <p>SDC es un intercambio entre el riesgo de divulgación versus la pérdida de utilidad de los datos (siempre buscando minimizar este último), al tiempo que reduce el riesgo de divulgación a un nivel aceptable. La utilidad de los datos en este contexto significa la utilidad de los datos anonimizados para los análisis estadísticos de los usuarios finales, así como la validez de estos análisis cuando se realizan con datos anonimizados. El riesgo de divulgación y su medición se definirán más adelante en <a href="medición-de-riesgos.html#medición-de-riesgos">Medición de riesgos</a>.</p>
 <p>Para lograr este equilibrio entre minimizar el riesgo de divulgación y maximizar la utilidad de los datos para los usuarios finales, es necesario medir la utilidad de los datos después de la anonimización y compararla con la utilidad de los datos originales.</p>
@@ -393,7 +394,7 @@ las variables continuas.</p>
 <h4><span class="header-section-number">9.1.1.1</span> Número de valores faltantes<a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#número-de-valores-faltantes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Una medida informativa es comparar el número de valores faltantes en los datos. Los valores faltantes a menudo se producen después de la supresión y a mayor cantidad de aplicación de supresiones será mayor el grado de pérdida de información. Después de usar la función de supresión local en un objeto <code>sdcMicro</code> , la cantidad de supresiones para cada variable clave categórica se puede recuperar con la función print(), como se muestra en el Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque1lbn">9.1</a><a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a>. El argumento ‘ls’ en la función <code>print()</code> es la supresión local. La salida muestra el número absoluto y relativo de supresiones.</p>
 <div class="example">
-<p><span id="exm:bloque1lbn" class="example"><strong>Example 9.1  </strong></span>Uso de la función print() para recuperar el número total de supresiones para cada variable clave categórica</p>
+<p><span id="exm:bloque1lbn" class="example"><strong>Bloque 9.1  </strong></span>Uso de la función print() para recuperar el número total de supresiones para cada variable clave categórica</p>
 </div>
 <div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb110-1" aria-hidden="true" tabindex="-1"></a>sdcInitial <span class="ot">&lt;-</span> <span class="fu">localSuppression</span>(sdcInitial, <span class="at">k =</span> <span class="dv">5</span>, <span class="at">importance =</span> <span class="cn">NULL</span>)</span>
 <span id="cb110-2"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb110-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -409,7 +410,7 @@ las variables continuas.</p>
 <p>Es posible contar y comparar el número de valores faltantes en los datos originales y los datos tratados. Esto puede ser útil para ver el aumento proporcional en el número de valores faltantes. Los valores faltantes
 también pueden tener otras fuentes, como la no respuesta. En el Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque2lbn">9.2</a> se muestran los valores faltantes para cada una de las variables clave categóricas en un objeto <code>sdcMicro</code>. Aquí se utiliza el supuesto que todos los valores faltantes están codificados como <code>NA</code>. Si los valores perdidos no están codificados como <code>NA</code>, sino otro valor, se debe utilizar el código de valores perdidos alternativo. Los resultados concuerdan con el número de valores faltantes introducidos por la supresión local en el ejemplo anterior, pero también muestran que la variable “RELIG” tiene 1000 valores faltantes en los datos originales.</p>
 <div class="example">
-<p><span id="exm:bloque2lbn" class="example"><strong>Example 9.2  </strong></span>Número de valores faltantes para cada variable clave categórica en un objeto <code>sdcMicro</code></p>
+<p><span id="exm:bloque2lbn" class="example"><strong>Bloque 9.2  </strong></span>Número de valores faltantes para cada variable clave categórica en un objeto <code>sdcMicro</code></p>
 </div>
 <div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Almacene los nombres de todas las variables clave categóricas en un vector</span></span>
 <span id="cb111-2"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb111-2" aria-hidden="true" tabindex="-1"></a>namesKeyVars <span class="ot">&lt;-</span> <span class="fu">names</span>(sdcInitial<span class="sc">@</span>manipKeyVars)</span>
@@ -436,7 +437,7 @@ también pueden tener otras fuentes, como la no respuesta. En el Bloque <a href=
 <p>Otra estadística útil es el número de registros modificados por variable. Estos se pueden contabilizar de forma similar a los valores perdidos e incluyen supresiones (es decir, cambios en los valores perdidos/<code>NA</code> en <code>R</code> ). El número de registros cambiados es un buen indicador del impacto de los métodos de anonimización en los datos. A
 continuación en el Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque3lbn">9.3</a> se muestra cómo calcular la cantidad de registros modificados para las variables PRAMmed.</p>
 <div class="example">
-<p><span id="exm:bloque3lbn" class="example"><strong>Example 9.3  </strong></span>Cálculo del número de registros modificados por variable</p>
+<p><span id="exm:bloque3lbn" class="example"><strong>Bloque 9.3  </strong></span>Cálculo del número de registros modificados por variable</p>
 </div>
 <div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Almacene los nombres de todas las variables del pram en un vector</span></span>
 <span id="cb112-2"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb112-2" aria-hidden="true" tabindex="-1"></a>namesPramVars <span class="ot">&lt;-</span> <span class="fu">names</span>(sdcInitial<span class="sc">@</span>manipPramVars)</span>
@@ -468,7 +469,7 @@ continuación en el Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-in
 <p>Una forma útil de medir la pérdida de información en variables categóricas es comparar tabulaciones univariadas y, lo que es más interesante, tablas de contingencia (también tabulaciones cruzadas o tablas de doble entrada) entre pares de variables. Para mantener la validez analítica de un conjunto de datos, las tablas de contingencia
 deben permanecer aproximadamente iguales. La función <code>table()</code> produce tablas de contingencia de una o más variables. El Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque4lbn">9.4</a> a continuación crea una tabla de contingencia de las variables “REGION” y “URBRUR”. Observamos pequeñas diferencias entre las tablas antes y después de la anonimización.</p>
 <div class="example">
-<p><span id="exm:bloque4lbn" class="example"><strong>Example 9.4  </strong></span>Comparación de tablas de contingencia de variables categóricas</p>
+<p><span id="exm:bloque4lbn" class="example"><strong>Bloque 9.4  </strong></span>Comparación de tablas de contingencia de variables categóricas</p>
 </div>
 <div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabla de contingencia (tabulación cruzada) de las variables region y urban/rural</span></span>
 <span id="cb113-2"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb113-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">table</span>(sdcInitial<span class="sc">@</span>origData[, <span class="fu">c</span>(<span class="st">&#39;REGION&#39;</span>, <span class="st">&#39;URBRUR&#39;</span>)]) <span class="co"># antes de la anonimización</span></span>
@@ -504,7 +505,7 @@ datos. <span class="citation">(<a href="#ref-domingo-ferrer2001" role="doc-bibli
 funciones del paquete base <code>R</code> o cualquier otro paquete estadístico se pueden usar para hacer esto. Los siguientes son algunos ejemplos en <code>R</code>.</p>
 <p>Para calcular la media de cada variable numérica usamos la función <code>colMeans()</code>. Para ignorar los valores perdidos, es necesario utilizar la opción <code>na.rm = TRUE</code>. “numVars” es un vector con los nombres de las variables numéricas. El Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque5lbn">9.5</a> muestra cómo calcular las medias de todas las variables numéricas. Los datos no tratados se extraen de la ranura ‘origData’ del objeto <code>sdcMicro</code> y los datos anonimizados del <em>slot</em> ‘manipNumVars’, que contiene las variables numéricas manipuladas. Observamos pequeños cambios en cada una de las tres variables.</p>
 <div class="example">
-<p><span id="exm:bloque5lbn" class="example"><strong>Example 9.5  </strong></span>Comparando las medias de variables continuas</p>
+<p><span id="exm:bloque5lbn" class="example"><strong>Bloque 9.5  </strong></span>Comparando las medias de variables continuas</p>
 </div>
 <div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="co"># datos no tratados</span></span>
 <span id="cb114-2"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb114-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colMeans</span>(sdcInitial<span class="sc">@</span>origData[, numVars], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
@@ -517,7 +518,7 @@ funciones del paquete base <code>R</code> o cualquier otro paquete estadístico 
 <span id="cb114-9"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb114-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  489.6030  993.8512 1168.7561</span></span></code></pre></div>
 <p>De la misma manera, se pueden calcular las matrices de correlación y covarianza de las variables numéricas en el objeto <em>sdcMicro</em> a partir de los datos no tratados y anonimizados. Esto se muestra en el Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque6lbn">9.6</a>. Observamos que la varianza de cada variable (los elementos diagonales en la matriz de covarianza) ha aumentado por la anonimización. Estas funciones también permiten calcular intervalos de confianza en el caso de muestras. Las medias y las covarianzas de los subconjuntos de los datos tampoco deberían diferir. Un ejemplo es la media de ingresos por género, por grupo de edad o por región. Este tipo de características de los datos son importantes para el análisis.</p>
 <div class="example">
-<p><span id="exm:bloque6lbn" class="example"><strong>Example 9.6  </strong></span>Comparación de estructuras de covarianza y matrices de correlación de variables numéricas</p>
+<p><span id="exm:bloque6lbn" class="example"><strong>Bloque 9.6  </strong></span>Comparación de estructuras de covarianza y matrices de correlación de variables numéricas</p>
 </div>
 <div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="co"># datos no tratados</span></span>
 <span id="cb115-2"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb115-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cov</span>(sdcInitial<span class="sc">@</span>origData[, numVars])</span>
@@ -556,7 +557,7 @@ la medida IL1s se define como:</p>
 <p>Cuando se usa <code>sdcMicro</code>, la medida de utilidad de datos IL1s se pueden calcular para todos los cuasi-identificadores numéricos con la función <code>dUtility()</code>, que se ilustra en el Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque7lbn">9.7</a> a
 continuación. En caso de ser necesario, también se puede calcular la medida en subconjuntos del conjunto completo de cuasi-identificadores numéricos. La función se llama <code>dUtility()</code>, pero devuelve una medida de pérdida de información. El resultado se guarda en la ranura de utilidad del objeto <code>sdcMicro</code> . El Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque7lbn">9.7</a> a continuación ilustra cómo llamar al resultado.</p>
 <div class="example">
-<p><span id="exm:bloque7lbn" class="example"><strong>Example 9.7  </strong></span>Uso de <code>dUtility()</code> para calcular la medida de utilidad de datos de IL1 en <code>sdcMicro</code></p>
+<p><span id="exm:bloque7lbn" class="example"><strong>Bloque 9.7  </strong></span>Uso de <code>dUtility()</code> para calcular la medida de utilidad de datos de IL1 en <code>sdcMicro</code></p>
 </div>
 <div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Evaluación de la medida IL1s para las variables en sdcMicro object sdcInitial</span></span>
 <span id="cb116-2"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb116-2" aria-hidden="true" tabindex="-1"></a>sdcInitial <span class="ot">&lt;-</span> <span class="fu">dUtility</span>(sdcInitial)</span>
@@ -582,7 +583,7 @@ Cuanto mayor sea la distancia entre los valores originales y anonimizados, menor
 <p>Otra forma de evaluar la pérdida de información es comparar los valores propios robustos de los datos antes y después de la anonimización. El Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque8lbn">9.8</a> ilustra cómo usar este enfoque con <code>sdcMicro</code> . Aquí “contVars” es un vector con los nombres de las variables continuas que nos interesan. “<code>obj</code>” es el argumento que
 especifica los datos no tratados y “<code>xm</code>” es el argumento que especifica los datos anonimizados. La salida de la función es la diferencia en valores propios. Por lo tanto, el valor mínimo es 0. Nuevamente, el uso principal es comparar diferentes métodos. Cuanto mayor sea el valor, mayores serán los cambios en los datos y la pérdida de información.</p>
 <div class="example">
-<p><span id="exm:bloque8lbn" class="example"><strong>Example 9.8  </strong></span>Uso de <code>dUtility()</code> para calcular valores propios en <code>sdcMicro</code></p>
+<p><span id="exm:bloque8lbn" class="example"><strong>Bloque 9.8  </strong></span>Uso de <code>dUtility()</code> para calcular valores propios en <code>sdcMicro</code></p>
 </div>
 <div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Comparación de valores para variables continuas</span></span>
 <span id="cb117-2"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb117-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dUtility</span>(<span class="at">obj =</span> sdcInitial<span class="sc">@</span>origData[,contVars],</span>
@@ -602,7 +603,7 @@ los usuarios de datos basados en microdatos publicados anteriormente.</p>
 <p>Como guía es necesario comparar los indicadores calculados sobre los datos no tratados y los datos después de la anonimización con diferentes métodos. Si las diferencias entre los indicadores no son demasiado grandes, el conjunto de datos anonimizados puede publicarse. Se debe tener en cuenta que los indicadores calculados sobre muestras son estimaciones con cierta varianza e intervalo de confianza. Por lo tanto, para datos de muestra, es informativo comparar la superposición de los intervalos de confianza y/o evaluar si la estimación puntual calculada después de la anonimización está contenida dentro del intervalo de confianza de la estimación original. Ejemplos de indicadores de referencia y sus intervalos de confianza y cómo calcularlos en <code>R</code> se incluyen en los estudios de casos de estas directrices. Aquí damos el ejemplo del coeficiente GINI.</p>
 <p>El coeficiente de GINI es una medida de dispersión estadística, que a menudo se utiliza para medir la desigualdad de ingresos. Una forma de medir la pérdida de información en los datos de ingresos es comparar la distribución de ingresos, lo que se puede hacer fácilmente comparando los coeficientes de GINI. Varios paquetes de <code>R</code> tienen funciones para calcular el coeficiente GINI. Elegimos el paquete <code>laeken</code>, que calcula el coeficiente GINI como el área entre la línea de 45 grados y la curva de Lorenz. Para usar la función <code>gini()</code>, primero tenemos que instalar y cargar la paquete <code>laeken</code>. Para calcular el coeficiente de GINI para la variable, usamos los pesos de muestra en los datos. Esto se muestra en Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque9lbn">9.9</a>. El coeficiente de GINI de los datos de la muestra es una variable aleatoria. Por lo tanto, es útil construir un intervalo de confianza alrededor del coeficiente para evaluar la importancia de cualquier cambio en el coeficiente después de la anonimización. La función <code>gini()</code> calcula un intervalo de confianza de 1-alfa para el coeficiente de GINI mediante el uso de bootstrap.</p>
 <div class="example">
-<p><span id="exm:bloque9lbn" class="example"><strong>Example 9.9  </strong></span>Cálculo del coeficiente de GINI a partir de la variable de ingresos para determinar la desigualdad de ingresos</p>
+<p><span id="exm:bloque9lbn" class="example"><strong>Bloque 9.9  </strong></span>Cálculo del coeficiente de GINI a partir de la variable de ingresos para determinar la desigualdad de ingresos</p>
 </div>
 <div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Coeficiente de Gini antes de la anonimización</span></span>
 <span id="cb118-2"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb118-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gini</span>(<span class="at">inc =</span> sdcInitial<span class="sc">@</span>origData[selInc,<span class="st">&#39;INC&#39;</span>],</span>
@@ -623,7 +624,7 @@ ingreso logarítmico en una constante, una variable ficticia de género, años d
 <p>El parámetro de interés aquí es <span class="math inline">\(β_1\)</span>, el efecto del género en el logaritmo del salario. <span class="math inline">\(X\)</span> es una matriz con varios otros factores que influyen en el salario y <span class="math inline">\(β\)</span> los coeficientes de estos factores. El Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque10lbn">9.10</a> ilustra cómo ejecutar una regresión de Mincer en <span class="math inline">\(R\)</span> usando la función <span class="math inline">\(ln()\)</span> y la evaluación de los coeficientes y los intervalos de confianza alrededor de los coeficientes. Realizamos la regresión como se especifica para los empleados asalariados con un salario positivo en los grupos de edad de
 15 a 65 años.</p>
 <div class="example">
-<p><span id="exm:bloque10lbn" class="example"><strong>Example 9.10  </strong></span>Estimación de la ecuación de Mincer (regresión) para evaluar la utilidad de los datos antes y después de la anonimización</p>
+<p><span id="exm:bloque10lbn" class="example"><strong>Bloque 9.10  </strong></span>Estimación de la ecuación de Mincer (regresión) para evaluar la utilidad de los datos antes y después de la anonimización</p>
 </div>
 <div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Variables de la ecuación de Mincer antes de la anonimización</span></span>
 <span id="cb119-2"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb119-2" aria-hidden="true" tabindex="-1"></a>Mlwage    <span class="ot">&lt;-</span> <span class="fu">log</span>(sdcMincer<span class="sc">@</span>origData<span class="sc">$</span>wage) <span class="co"># salario de registro</span></span>
@@ -716,7 +717,7 @@ anonimización. Esta sección enumera algunas de estas funciones y paquetes y pr
 visualización depende de los anchos de las barras y el inicio de la primera barra. Los histogramas se pueden utilizar para variables continuas y semicontinuas. Los gráficos de densidad muestran la densidad del kernel de los datos; por lo tanto, la gráfica depende del kernel que se elija y si los datos se ajustan bien al kernel. Sin embargo, los gráficos de densidad son una buena herramienta para ilustrar el cambio de valores y rangos de valores de variables continuas.</p>
 <p>Los histogramas se pueden trazar con la función <code>hist()</code> y las densidades del kernel con las funciones <code>plot()</code> y <code>density()</code> en <code>R</code> . El Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque11lbn">9.11</a> muestra ejemplos de cómo utilizar estas funciones para ilustrar los cambios en la variable “INC”, una variable de ingresos. La función <code>hist()</code> necesita como argumento los puntos de ruptura del histograma. Los resultados se muestran en la Figura @ref(fig:fig3_sec05) y la Figura @ref(fig:fig4_sec05). Los histogramas y los gráficos de densidad dan una indicación clara de cómo han cambiado los valores: la variabilidad de los datos ha aumentado y la forma de la distribución ha cambiado.</p>
 <div class="example">
-<p><span id="exm:bloque11lbn" class="example"><strong>Example 9.11  </strong></span>Trazado de histogramas y densidades kernel</p>
+<p><span id="exm:bloque11lbn" class="example"><strong>Bloque 9.11  </strong></span>Trazado de histogramas y densidades kernel</p>
 </div>
 <div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Histograma</span></span>
 <span id="cb120-2"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb120-2" aria-hidden="true" tabindex="-1"></a><span class="co"># gráfico de histograma antes de la anonimización</span></span>
@@ -756,7 +757,7 @@ visualización depende de los anchos de las barras y el inicio de la primera bar
 <p>Los diagramas de caja brindan una descripción general rápida de los cambios en la dispersión y los valores atípicos de las variables continuas antes y después de la anonimización. El Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque12lbn">9.12</a> a continuación muestra cómo generar diagramas de caja en <code>R</code> con la función <code>boxplot()</code>. resultado de la figura
 @ref(fig:fig5_sec05) muestra un ejemplo de una variable de gasto después de agregar ruido. El diagrama de caja muestra claramente que la variabilidad en la variable gasto aumentó como resultado de los métodos de anonimización aplicados.</p>
 <div class="example">
-<p><span id="exm:bloque12lbn" class="example"><strong>Example 9.12  </strong></span>Creación de diagramas de caja para variables continuas</p>
+<p><span id="exm:bloque12lbn" class="example"><strong>Bloque 9.12  </strong></span>Creación de diagramas de caja para variables continuas</p>
 </div>
 <div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(sdcObj<span class="sc">@</span>origData<span class="sc">$</span>TOTFOOD, sdcObj<span class="sc">@</span>manipNumVars<span class="sc">$</span>TOTFOOD,</span>
 <span id="cb121-2"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb121-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">xaxt =</span> <span class="st">&#39;n&#39;</span>, <span class="at">ylab =</span> <span class="st">&quot;Expenditure&quot;</span>)</span>
@@ -775,7 +776,7 @@ visualización depende de los anchos de las barras y el inicio de la primera bar
 ejemplo, ver rápidamente el efecto de diferentes niveles de k-anonimato o diferencias en los vectores de importancia en el algoritmo de supresión local (ver la Sección <a href="métodos-sdc.html#sup-loc">Supresión local</a>.</p>
 <p>Ilustramos los cambios en las tabulaciones con un ejemplo de la variable “WATER” antes y después de aplicar PRAM. Podemos usar gráficos de mosaico para ver rápidamente los cambios de cada categoría. El Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque13lbn">9.13</a> muestra el código en <code>R</code> . La función <code>mosaicplot()</code> está disponible en el paquete base de <code>R</code>. Para graficar una tabulación, primero se debe hacer la tabulación con la función <code>table()</code>. Para mostrar las etiquetas en <code>mosaicplot()</code>, cambiamos la clase de las variables a ‘factor’. Al observar el gráfico de mosaico en la Figura @ref(fig:fig6_sec05), vemos que la PRAM invariante prácticamente no tiene influencia en la distribución univariante.</p>
 <div class="example">
-<p><span id="exm:bloque13lbn" class="example"><strong>Example 9.13  </strong></span>Creando mosaicos univariados</p>
+<p><span id="exm:bloque13lbn" class="example"><strong>Bloque 9.13  </strong></span>Creando mosaicos univariados</p>
 </div>
 <div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Recopilación de datos de la variable WATER antes y después de la anonimización</span></span>
 <span id="cb122-2"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb122-2" aria-hidden="true" tabindex="-1"></a><span class="co"># asignación de etiquetas al gráfico</span></span>
@@ -805,7 +806,7 @@ ejemplo, ver rápidamente el efecto de diferentes niveles de k-anonimato o difer
 <p>Usamos las variables “<em>gender</em>” y “<em>relationship status</em>” para ilustrar el uso de gráficos de mosaico para la ilustración de cambios en las tabulaciones univariadas introducidas por varios conjuntos de métodos de anonimización. La Tabla <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#tab:tbl3lbn">9.1</a> proporciona los métodos aplicados en cada escenario. El escenario 0, el escenario base, muestra las categorías originales de las variables de género y estado civil, mientras que los escenarios 1 a 6 muestran cambios en las categorías después de aplicar diferentes técnicas de anonimización. La tabla muestra una descripción de los métodos de anonimización utilizados en cada escenario. En total, visualizamos el impacto de seis conjuntos diferentes de métodos de anonimización. Podemos usar gráficos de mosaico para ver rápidamente qué conjunto de métodos tiene qué impacto en las variables de <em>gender</em> y <em>relationship status</em>, que se pueden usar para seleccionar el mejor escenario. Mirando los gráficos de mosaico en la Figura @ref(fig:fig7_sec05), vemos que los escenarios 2, 5 y 6 dan los cambios más pequeños para la variable de <em>gender</em> y los escenarios 3 y 4 para la variable de <em>relationship status</em>.</p>
 <table class="table table-striped" style>
 <caption>
-<span id="tab:tbl3lbn">Table 9.1: </span>Descripción de métodos de anonimización por escenario
+<span id="tab:tbl3lbn">Tabla 9.1: </span>Descripción de métodos de anonimización por escenario
 </caption>
 <thead>
 <tr>
@@ -887,7 +888,7 @@ Recodificar age (intervalos de cinco años) más supresión local (requerido k
 tabulaciones cruzadas/tablas de contingencia. El Bloque <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#exm:bloque14lbn">9.14</a> a continuación muestra cómo generar gráficos de mosaico para dos variables. Para comparar los cambios, necesitamos comparar dos gráficos diferentes. La Figura @ref(fig:fig8_sec05) y la Figura @ref(fig:fig9_sec05) ilustran que la PRAM no conserva las tablas
 de doble entrada en este caso.</p>
 <div class="example">
-<p><span id="exm:bloque14lbn" class="example"><strong>Example 9.14  </strong></span>Creando mosaicos multivariados</p>
+<p><span id="exm:bloque14lbn" class="example"><strong>Bloque 9.14  </strong></span>Creando mosaicos multivariados</p>
 </div>
 <div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Antes de la anonimización: tabla de contingencia y gráfico de mosaico</span></span>
 <span id="cb123-2"><a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#cb123-2" aria-hidden="true" tabindex="-1"></a>ROOFTOILETbefore <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">table</span>(<span class="fu">factor</span>(sdcHH<span class="sc">@</span>origData<span class="sc">$</span>ROOF, <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">9</span>),</span>
@@ -1004,7 +1005,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/main/05-utilidad_perdida.Rmd",
+"link": "https://github.com/ajusteestacionaline/taller/edit/main/05-utilidad_perdida.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -1012,10 +1013,10 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/main/05-utilidad_perdida.Rmd",
+"link": "https://github.com/ajusteestacionaline/taller/blob/main/05-utilidad_perdida.Rmd",
 "text": null
 },
-"download": null,
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
 "search": {
 "engine": "fuse",
 "options": null

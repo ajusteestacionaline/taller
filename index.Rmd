@@ -1,5 +1,5 @@
 --- 
-title:  Guía para el Control de Divulgación Estadística en Microdatos
+title:  Ajuste estacional de datos de series temporales económicas y sociales
 author: "Subdepartamento de Investigación Estadística"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

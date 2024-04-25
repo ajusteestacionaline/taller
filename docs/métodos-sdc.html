@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Métodos SDC | Guía para el Control de Divulgación Estadística en Microdatos</title>
+  <title>Capítulo 8 Métodos SDC | Ajuste estacional de datos de series temporales económicas y sociales</title>
   <meta name="description" content="Este es un documento central para el trabajo de Control a la Divulgación Estadística de Microdatos en el Instituto Nacional de Estadísticas de Chile." />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Métodos SDC | Guía para el Control de Divulgación Estadística en Microdatos" />
+  <meta property="og:title" content="Capítulo 8 Métodos SDC | Ajuste estacional de datos de series temporales económicas y sociales" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://www.ine.gob.cl/Imagenes/Logo_INE2.png" />
   <meta property="og:description" content="Este es un documento central para el trabajo de Control a la Divulgación Estadística de Microdatos en el Instituto Nacional de Estadísticas de Chile." />
   <meta name="github-repo" content="sdcchile/tallersdc/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Métodos SDC | Guía para el Control de Divulgación Estadística en Microdatos" />
+  <meta name="twitter:title" content="Capítulo 8 Métodos SDC | Ajuste estacional de datos de series temporales económicas y sociales" />
   
   <meta name="twitter:description" content="Este es un documento central para el trabajo de Control a la Divulgación Estadística de Microdatos en el Instituto Nacional de Estadísticas de Chile." />
   <meta name="twitter:image" content="https://www.ine.gob.cl/Imagenes/Logo_INE2.png" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Subdepartamento de Investigación Estadística" />
 
 
-<meta name="date" content="2024-04-24" />
+<meta name="date" content="2024-04-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -163,7 +163,7 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">SHORT TITLE HERE</a></li>
+<li class="toc-logo"><a href="./"><img src="Imagenes/Logo_INE2.png"></a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prefacio</a>
@@ -331,7 +331,8 @@ div.csl-indent {
 <li class="chapter" data-level="12" data-path="taller-sdc-video.html"><a href="taller-sdc-video.html"><i class="fa fa-check"></i><b>12</b> Taller SDC Video</a></li>
 <li class="chapter" data-level="" data-path="referencias-1.html"><a href="referencias-1.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/ajusteestacionaline/taller/blob/main/" target="blank">Publicado con bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -341,7 +342,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Guía para el Control de Divulgación Estadística en Microdatos</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Ajuste estacional de datos de series temporales económicas y sociales</a>
           </h1>
         </div>
 
@@ -350,7 +351,7 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="métodos-sdc" class="section level1 hasAnchor" number="8">
-<h1><span class="header-section-number">Chapter 8</span> Métodos SDC<a href="métodos-sdc.html#métodos-sdc" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Capítulo 8</span> Métodos SDC<a href="métodos-sdc.html#métodos-sdc" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Esta sección describe los métodos SDC más utilizados. Todos los métodos se pueden implementar en <code>R</code> utilizando el paquete <code>sdcMicro</code>. Discutimos qué método es más adecuado para cada tipo de datos, tanto en términos de características como del tipo de dato. Además, se discuten opciones como los parámetros específicos de cada método, así como sus impactos. Las conclusiones pretenden ser orientativas, pero deben utilizarse con precaución, ya que cada operación estadística genera datos con características diferentes y las recomendaciones del documento no siempre serán las más adecuadas para sus datos en particular.</p>
 <p>Para determinar qué métodos de anonimización son adecuados para variables y/o conjuntos de datos específicos, comenzamos presentando algunas clasificaciones de los métodos SDC.</p>
 <div id="clasificación-de-los-métodos-sdc" class="section level2 hasAnchor" number="8.1">
@@ -368,7 +369,7 @@ Tanto los métodos no perturbativos como los perturbativos pueden utilizarse par
 <p>Discutiremos los métodos SDC que se implementan en el paquete <code>sdcMicro</code> o que pueden implementarse fácilmente en R. Estos son los métodos más comúnmente aplicados en la literatura y utilizados en la mayoría de las agencias con experiencia en el uso de estos métodos. La Tabla <a href="métodos-sdc.html#tab:Tabla6">8.1</a> ofrece una visión general de los métodos de SDC discutidos en esta guía, su clasificación, los tipos de datos a los que son aplicables y los nombres de sus funciones en el paquete <code>sdcMicro</code>.</p>
 <table>
 <caption>
-<span id="tab:Tabla6">Table 8.1: </span>Métodos SDC y funciones correspondientes en <code>sdcMicro</code>
+<span id="tab:Tabla6">Tabla 8.1: </span>Métodos SDC y funciones correspondientes en <code>sdcMicro</code>
 </caption>
 <thead>
 <tr>
@@ -516,7 +517,7 @@ continuo
 <p>Algunos ejemplos serían agrupar las comunas en provincias, las regiones en macrozonas o las categorías detalladas de agua limpia. Agrupar todas las regiones pequeñas sin proximidad geográfica no es necesariamente la mejor opción desde el punto de vista de los servicios públicos. La Tabla <a href="métodos-sdc.html#tab:Tabla7">8.2</a> lo ilustra con un conjunto de datos de ejemplo muy simplificado. Antes de la recodificación, tres individuos tienen claves distintas, mientras que después de la recodificación (agrupando la “Región 1” y la “Región 2” en el “Norte”, la “Región 3” en el “Centro” y la “Región 4” y la “Región 5” en el “Sur”), el número de claves distintas se reduce a cuatro y la frecuencia de cada clave es de al menos dos, basándose en los tres identificadores indirectos seleccionados. Los recuentos de la frecuencia de las claves <span class="math inline">\(fk\)</span> se muestran en la última columna de la Tabla <a href="métodos-sdc.html#tab:Tabla7">8.2</a>. Un intruso encontraría al menos dos individuos para cada clave y no podría distinguir más entre los individuos 1 - 3, los individuos 4 y 6, los individuos 5 y 7 y los individuos 8 - 10, basándose en las variables clave seleccionadas.</p>
 <table>
 <caption>
-<span id="tab:Tabla7">Table 8.2: </span>Ilustración del efecto de la recodificación en los recuentos de frecuencia de las variables clave
+<span id="tab:Tabla7">Tabla 8.2: </span>Ilustración del efecto de la recodificación en los recuentos de frecuencia de las variables clave
 </caption>
 <thead>
 <tr>
@@ -857,7 +858,7 @@ Musulmán
 <p>La recodificación suele ser el primer paso de un proceso de anonimización. Puede utilizarse para reducir el número de combinaciones únicas de valores de las variables clave. Por lo general, esto aumenta los recuentos de frecuencia de la mayoría de las claves y reduce el riesgo de divulgación. La reducción del número de combinaciones posibles se ilustra en la Tabla <a href="métodos-sdc.html#tab:Tabla8">8.3</a> con los identificadores indirectos “región”, “estado civil” y “edad”. La Tabla <a href="métodos-sdc.html#tab:Tabla8">8.3</a> muestra el número de categorías de cada variable y el número de combinaciones teóricamente posibles, que es el producto del número de categorías de cada identificador indirecto, antes y después de la recodificación. La “edad” se interpreta como una variable semicontinua y se trata como una variable categórica. El número de combinaciones posibles y, por tanto, el riesgo de reidentificación se reducen en gran medida con la recodificación. Hay que tener en cuenta que el número de combinaciones posibles es un número teórico; en la práctica, pueden incluirse combinaciones muy improbables, como edad = 3 y estado civil = viudo, y el número real de combinaciones en un conjunto de datos puede ser inferior.</p>
 <table>
 <caption>
-<span id="tab:Tabla8">Table 8.3: </span>Ilustración del efecto de la recodificación en el número de combinaciones teóricamente posibles de un conjunto de datos
+<span id="tab:Tabla8">Tabla 8.3: </span>Ilustración del efecto de la recodificación en el número de combinaciones teóricamente posibles de un conjunto de datos
 </caption>
 <thead>
 <tr>
@@ -1001,7 +1002,7 @@ después de la recodificación
 <span id="cb31-48"><a href="métodos-sdc.html#cb31-48" aria-hidden="true" tabindex="-1"></a>sdcInitial <span class="ot">&lt;-</span> sdcHH</span>
 <span id="cb31-49"><a href="métodos-sdc.html#cb31-49" aria-hidden="true" tabindex="-1"></a>sdc_respaldo <span class="ot">&lt;-</span> sdcHH</span></code></pre></div>
 <div class="example">
-<p><span id="exm:bloque15jgm" class="example"><strong>Example 8.1  </strong></span>Uso de la función <code>sdcMicro</code> <code>groupAndRename()</code> para recodificar una variable categórica</p>
+<p><span id="exm:bloque15jgm" class="example"><strong>Bloque 8.1  </strong></span>Uso de la función <code>sdcMicro</code> <code>groupAndRename()</code> para recodificar una variable categórica</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque15jgm) -->
@@ -1015,7 +1016,7 @@ después de la recodificación
 <span id="cb32-2"><a href="métodos-sdc.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(sdcInitial<span class="sc">@</span>manipKeyVars<span class="sc">$</span>sizeRes)</span></code></pre></div>
 <pre><code>## 
 ## capital, large city          small city                town         countryside 
-##                 782                 368                 166                 684</code></pre>
+##                 792                 348                 176                 684</code></pre>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="métodos-sdc.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Recodificar urbano</span></span>
 <span id="cb34-2"><a href="métodos-sdc.html#cb34-2" aria-hidden="true" tabindex="-1"></a>sdcInitial  <span class="ot">&lt;-</span>  <span class="fu">groupAndRename</span>(sdcInitial, <span class="at">var =</span> <span class="st">&quot;sizeRes&quot;</span>,</span>
 <span id="cb34-3"><a href="métodos-sdc.html#cb34-3" aria-hidden="true" tabindex="-1"></a>                          <span class="at">before =</span> <span class="fu">c</span>(<span class="st">&quot;capital, large city&quot;</span>, <span class="st">&quot;small city&quot;</span>, <span class="st">&quot;town&quot;</span>),</span>
@@ -1032,9 +1033,9 @@ después de la recodificación
 ##  1316   684</code></pre>
 <p>La <a href="métodos-sdc.html#fig:fig4">8.1</a> ilustra el efecto de la recodificación de la variable “sizeRes” y muestra respectivamente los recuentos de frecuencia antes y después de la recodificación. Vemos que el número de categorías se ha reducido de 4 a 2 y las categorías pequeñas (“small city” y “town”) han desaparecido.</p>
 <div class="figure"><span style="display:block;" id="fig:fig4"></span>
-<img src="bookdownproj_files/figure-html/fig4-1.png" alt="Efecto de la recodificación y recuentos de frecuencia antes y después de la recodificación" width="100%" />
+<img src="bookdown-demo_files/figure-html/fig4-1.png" alt="Efecto de la recodificación y recuentos de frecuencia antes y después de la recodificación" width="100%" />
 <p class="caption">
-Figure 8.1: Efecto de la recodificación y recuentos de frecuencia antes y después de la recodificación
+Figura 8.1: Efecto de la recodificación y recuentos de frecuencia antes y después de la recodificación
 </p>
 </div>
 </div>
@@ -1046,7 +1047,7 @@ Figure 8.1: Efecto de la recodificación y recuentos de frecuencia antes y despu
 </blockquote>
 <p>Por lo tanto, los intervalos deben cubrir todo el rango de valores de la variable.</p>
 <div class="example">
-<p><span id="exm:bloque16jgm" class="example"><strong>Example 8.2  </strong></span>Uso de la función <code>sdcMicro</code> <code>globalRecode()</code> para recodificar una variable continua (edad)</p>
+<p><span id="exm:bloque16jgm" class="example"><strong>Bloque 8.2  </strong></span>Uso de la función <code>sdcMicro</code> <code>globalRecode()</code> para recodificar una variable continua (edad)</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque16jgm) -->
@@ -1066,14 +1067,14 @@ Figure 8.1: Efecto de la recodificación y recuentos de frecuencia antes y despu
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="métodos-sdc.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Guardo objeto de edad en tramos para volver a utilizar en localSupresion</span></span>
 <span id="cb38-2"><a href="métodos-sdc.html#cb38-2" aria-hidden="true" tabindex="-1"></a>sdcInitial_edad <span class="ot">&lt;-</span> sdcInitial</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:fig5"></span>
-<img src="bookdownproj_files/figure-html/fig5-1.png" alt="Variable de edad antes y después de la recodificación" width="100%" />
+<img src="bookdown-demo_files/figure-html/fig5-1.png" alt="Variable de edad antes y después de la recodificación" width="100%" />
 <p class="caption">
-Figure 8.2: Variable de edad antes y después de la recodificación
+Figura 8.2: Variable de edad antes y después de la recodificación
 </p>
 </div>
 <p>En lugar de crear intervalos de igual anchura, también podemos crear intervalos de anchura desigual. Esto se ilustra en el Bloque <a href="métodos-sdc.html#exm:bloque17jgm">8.3</a>, donde utilizamos los grupos de edad 1-5, 6-11, 12-17, 18-21, 22-25, 26-49, 50-64 y 65+. En este ejemplo, es un paso útil, ya que incluso después de recodificar en intervalos de 10 años, las categorías con valores de edad altos tienen frecuencias bajas. Elegimos los intervalos respetando los valores relevantes de la edad escolar y de la edad laboral (por ejemplo, la edad de jubilación es de 65 años en este ejemplo) de forma que los datos puedan seguir utilizándose para la investigación común sobre educación y empleo. La <a href="métodos-sdc.html#fig:fig6">8.3</a> muestra el efecto de la recodificación de la variable “edad”.</p>
 <div class="example">
-<p><span id="exm:bloque17jgm" class="example"><strong>Example 8.3  </strong></span>Uso de <code>globalRecode()</code> para crear intervalos de ancho desigual</p>
+<p><span id="exm:bloque17jgm" class="example"><strong>Bloque 8.3  </strong></span>Uso de <code>globalRecode()</code> para crear intervalos de ancho desigual</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque17jgm) -->
@@ -1094,9 +1095,9 @@ Figure 8.2: Variable de edad antes y después de la recodificación
 ##    (0,5]   (5,11]  (11,17]  (17,21]  (21,25]  (25,49]  (49,65] (65,100] 
 ##        0        0        6       52      122     1213      398      209</code></pre>
 <div class="figure"><span style="display:block;" id="fig:fig6"></span>
-<img src="bookdownproj_files/figure-html/fig6-1.png" alt="Variable de edad antes y después de la recodificación" width="100%" />
+<img src="bookdown-demo_files/figure-html/fig6-1.png" alt="Variable de edad antes y después de la recodificación" width="100%" />
 <p class="caption">
-Figure 8.3: Variable de edad antes y después de la recodificación
+Figura 8.3: Variable de edad antes y después de la recodificación
 </p>
 </div>
 <p>Precaución sobre el uso de la función <code>globalRecode()</code> en <code>sdcMicro</code>: En la implementación actual de <code>sdcMicro</code>, los intervalos se definen como abiertos a la izquierda. En términos matemáticos, esto significa que, en nuestro ejemplo, la edad 0 está excluida de los intervalos especificados. En notación de intervalos, esto se denota como (0, 5] (como en las etiquetas del eje x en la <a href="métodos-sdc.html#fig:fig5">8.2</a> y la <a href="métodos-sdc.html#fig:fig6">8.3</a> para la variable recodificada). El intervalo (0, 5] se interpreta como de 0 a 5 y no incluye el 0, pero sí el 5. <code>R</code> recodifica los valores que no están contenidos en ninguno de los intervalos como perdidos (<code>NA</code>). Esta implementación establecería en nuestro ejemplo todos los valores de edad 0 (niños menores de 1 año) como perdidos y podría significar potencialmente una gran pérdida de datos. La función <code>globalRecode()</code> solo permite construir intervalos que queden abiertos. Este puede no ser un resultado deseable y la pérdida de las edades cero de los datos es claramente problemática para un conjunto de datos del mundo real.</p>
@@ -1105,7 +1106,7 @@ Figure 8.3: Variable de edad antes y después de la recodificación
 <li>Una solución para las variables semicontinuas<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a> y el valor 9999,5 se clasificaría erróneamente como perteneciente al intervalo [10000, 19999].] que permitiría utilizar <code>globalRecode()</code> sería restar un pequeño número a los intervalos límite, permitiendo así crear los intervalos deseados. En el siguiente ejemplo, restar 0,1 a cada intervalo obliga a <code>globalRecode()</code> a incluir el 0 en el intervalo inferior y permitir las pausas donde las queramos. Establecemos el límite superior del intervalo para que sea mayor que el valor máximo de la variable “edad”. Podemos utilizar la opción etiquetas para definir etiquetas claras para las nuevas categorías. Esto se ilustra en el Bloque <a href="métodos-sdc.html#exm:bloque18jgm">8.4</a>.</li>
 </ul>
 <div class="example">
-<p><span id="exm:bloque18jgm" class="example"><strong>Example 8.4  </strong></span>Construcción de intervalos abiertos a la derecha para variables semicontinuas utilizando la función incorporada de <code>sdcMicro</code>, <code>globalRecode()</code></p>
+<p><span id="exm:bloque18jgm" class="example"><strong>Bloque 8.4  </strong></span>Construcción de intervalos abiertos a la derecha para variables semicontinuas utilizando la función incorporada de <code>sdcMicro</code>, <code>globalRecode()</code></p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque18jgm) -->
@@ -1116,16 +1117,16 @@ Figure 8.3: Variable de edad antes y después de la recodificación
 <span id="cb41-4"><a href="métodos-sdc.html#cb41-4" aria-hidden="true" tabindex="-1"></a>                           <span class="at">breaks =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.1</span>, <span class="fl">14.9</span>, <span class="fl">64.9</span>, <span class="fl">99.9</span>),</span>
 <span id="cb41-5"><a href="métodos-sdc.html#cb41-5" aria-hidden="true" tabindex="-1"></a>                           <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&#39;[0,15)&#39;</span>, <span class="st">&#39;[15,65)&#39;</span>, <span class="st">&#39;[65,100)&#39;</span>))</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:figx1"></span>
-<img src="bookdownproj_files/figure-html/figx1-1.png" alt="Variable de edad antes y después de la recodificación" width="100%" />
+<img src="bookdown-demo_files/figure-html/figx1-1.png" alt="Variable de edad antes y después de la recodificación" width="100%" />
 <p class="caption">
-Figure 8.4: Variable de edad antes y después de la recodificación
+Figura 8.4: Variable de edad antes y después de la recodificación
 </p>
 </div>
 <ul>
 <li>También es posible utilizar código en <code>R</code> para recodificar manualmente las variables sin utilizar las funciones <code>sdcMicro</code>. Cuando se utilizan las funciones <code>sdcMicro</code>, el cambio en el riesgo después de la recodificación se recalcula automáticamente, pero si se recodifica manualmente no lo hace. En este caso, hay que dar un paso más y recalcular el riesgo después de cambiar manualmente las variables en el objeto <code>sdcMicro</code>. Este enfoque también es válido para las variables continuas y se ilustra en el Bloque <a href="métodos-sdc.html#exm:bloque19jgm">8.5</a>.</li>
 </ul>
 <div class="example">
-<p><span id="exm:bloque19jgm" class="example"><strong>Example 8.5  </strong></span>Construcción de intervalos para variables semicontinuas y continuas mediante recodificación manual en R</p>
+<p><span id="exm:bloque19jgm" class="example"><strong>Bloque 8.5  </strong></span>Construcción de intervalos para variables semicontinuas y continuas mediante recodificación manual en R</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque19jgm) -->
@@ -1161,14 +1162,14 @@ Figure 8.4: Variable de edad antes y después de la recodificación
 <li>Tener en cuenta el uso previsto de los datos y el propósito para el que se realizó la encuesta. Por ejemplo, si los datos se utilizan normalmente para medir la participación en la fuerza laboral de las personas de 15 a 64 años, la codificación superior e inferior no debe interferir con las categorías de 15 a 64 años. De lo contrario, el analista se encontraría con la imposibilidad de crear las medidas deseadas para las que estaban destinados los datos. En el ejemplo, consideramos esto y codificamos todas las edades superiores a 64 años.</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:fig7"></span>
-<img src="bookdownproj_files/figure-html/fig7-1.png" alt="Utilización de la distribución de frecuencias de la variable edad para determinar el umbral de la codificación superior" width="100%" />
+<img src="bookdown-demo_files/figure-html/fig7-1.png" alt="Utilización de la distribución de frecuencias de la variable edad para determinar el umbral de la codificación superior" width="100%" />
 <p class="caption">
-Figure 8.5: Utilización de la distribución de frecuencias de la variable edad para determinar el umbral de la codificación superior
+Figura 8.5: Utilización de la distribución de frecuencias de la variable edad para determinar el umbral de la codificación superior
 </p>
 </div>
 <p>La codificación superior e inferior se puede hacer fácilmente con la función <code>topBotCoding()</code> en <code>sdcMicro</code>. La codificación superior y la inferior no pueden hacerse simultáneamente en <code>sdcMicro</code>. El Bloque <a href="métodos-sdc.html#exm:bloque20jgm">8.6</a> ilustra cómo recodificar valores de edad superior a 64 y valores de edad inferior a 5; 65 y 5 reemplazan los valores respectivamente. Para construir varias categorías de codificación superior o inferior, por ejemplo, edad de 65 a 80 años y superior a 80 años, se puede utilizar la función <code>groupAndRename()</code> en sdcMicro o la recodificación manual como se describe en la subsección anterior.</p>
 <div class="example">
-<p><span id="exm:bloque20jgm" class="example"><strong>Example 8.6  </strong></span>Codificación superior y codificación inferior en <code>sdcMicro</code> utilizando la función <code>topBotCoding()</code></p>
+<p><span id="exm:bloque20jgm" class="example"><strong>Bloque 8.6  </strong></span>Codificación superior y codificación inferior en <code>sdcMicro</code> utilizando la función <code>topBotCoding()</code></p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque20jgm) -->
@@ -1185,9 +1186,9 @@ Figure 8.5: Utilización de la distribución de frecuencias de la variable edad 
 <span id="cb43-10"><a href="métodos-sdc.html#cb43-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb43-11"><a href="métodos-sdc.html#cb43-11" aria-hidden="true" tabindex="-1"></a><span class="co">#table(sdcInitial@manipKeyVars$AGEYRS)</span></span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:figx2"></span>
-<img src="bookdownproj_files/figure-html/figx2-1.png" alt="Distribución de frecuencias de la variable edad con codificación superior" width="100%" />
+<img src="bookdown-demo_files/figure-html/figx2-1.png" alt="Distribución de frecuencias de la variable edad con codificación superior" width="100%" />
 <p class="caption">
-Figure 8.6: Distribución de frecuencias de la variable edad con codificación superior
+Figura 8.6: Distribución de frecuencias de la variable edad con codificación superior
 </p>
 </div>
 </div>
@@ -1227,7 +1228,7 @@ Figure 8.6: Distribución de frecuencias de la variable edad con codificación s
 <p>La Tabla <a href="métodos-sdc.html#tab:Tabla9">8.4</a> presenta un conjunto de datos con siete encuestados y tres identificadores indirectos. La combinación {“mujer”, “rural”, “superior”} para las variables “sexo”, “región” y “educación” es una combinación poco segura, ya que es única en la muestra. Al suprimir el valor “mujer” o “superior”, el encuestado ya no puede distinguirse de los demás encuestados, ya que ese encuestado comparte la misma combinación de variables clave con al menos otros tres encuestados. Solo se suprime el valor de la combinación insegura del único encuestado en riesgo, no los valores de la misma variable de los demás encuestados. La libertad de elegir qué valor se suprime puede utilizarse para minimizar el número total de supresiones y, por tanto, la pérdida de información. Además, si una variable es muy importante para el usuario, podemos elegir no suprimir los valores de esta variable, a menos que sea estrictamente necesario. En el ejemplo, podemos elegir entre suprimir el valor “mujer” o “mayor” para conseguir un archivo de datos seguro; elegimos suprimir “mayor”. Esta elección debe hacerse teniendo en cuenta las necesidades de los usuarios de los datos. En este ejemplo, consideramos que “sexo” es más importante que “educación”.</p>
 <table>
 <caption>
-<span id="tab:Tabla9">Table 8.4: </span>Ilustración de la supresión local - datos antes y después de la supresión
+<span id="tab:Tabla9">Tabla 8.4: </span>Ilustración de la supresión local - datos antes y después de la supresión
 </caption>
 <thead>
 <tr>
@@ -1439,7 +1440,7 @@ media
 </blockquote>
 <p>Por lo general, el número total de valores suprimidos necesarios para alcanzar el nivel requerido de <span class="math inline">\(k\)</span>-anonimato aumenta cuando se especifica un vector de importancia, ya que el vector de importancia impide utilizar el patrón de supresión óptimo. El vector de importancia debe especificarse solo en los casos en que las variables con muchas categorías desempeñen un papel importante en la utilidad de los datos para los usuarios de los mismos<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a>.</p>
 <div class="example">
-<p><span id="exm:bloque21jgm" class="example"><strong>Example 8.7  </strong></span>Aplicación de la supresión local con y sin vector de importancia</p>
+<p><span id="exm:bloque21jgm" class="example"><strong>Bloque 8.7  </strong></span>Aplicación de la supresión local con y sin vector de importancia</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque21jgm) -->
@@ -1454,12 +1455,12 @@ media
 <span id="cb48-8"><a href="métodos-sdc.html#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(sdcInitial, <span class="at">type=</span><span class="st">&quot;ls&quot;</span>)</span></code></pre></div>
 <pre><code>## Local suppression (applied per strata given by variable(s) strata_region)</code></pre>
 <pre><code>##   KeyVar | Suppressions (#) | Suppressions (%)
-##  sizeRes |                0 |            0.000
-##   AGEYRS |              245 |           12.250
+##  sizeRes |                1 |            0.050
+##   AGEYRS |              280 |           14.000
 ##   GENDER |                0 |            0.000
 ##   REGION |                0 |            0.000
-##    etnia |               16 |            0.800
-##    RELIG |               21 |            1.050</code></pre>
+##    etnia |               17 |            0.850
+##    RELIG |               25 |            1.250</code></pre>
 <pre><code>## ----------------------------------------------------------------------</code></pre>
 <div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="métodos-sdc.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Deshacer las supresiones</span></span>
 <span id="cb52-2"><a href="métodos-sdc.html#cb52-2" aria-hidden="true" tabindex="-1"></a>sdcInitial <span class="ot">&lt;-</span> <span class="fu">undolast</span>(sdcInitial)</span>
@@ -1471,19 +1472,19 @@ media
 <span id="cb52-8"><a href="métodos-sdc.html#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(sdcInitial, <span class="at">type=</span><span class="st">&quot;ls&quot;</span>)</span></code></pre></div>
 <pre><code>## Local suppression (applied per strata given by variable(s) strata_region)</code></pre>
 <pre><code>##   KeyVar | Suppressions (#) | Suppressions (%)
-##  sizeRes |              134 |            6.700
+##  sizeRes |              138 |            6.900
 ##   AGEYRS |               16 |            0.800
-##   GENDER |                0 |            0.000
+##   GENDER |                1 |            0.050
 ##   REGION |                0 |            0.000
-##    etnia |               79 |            3.950
-##    RELIG |               54 |            2.700</code></pre>
+##    etnia |              108 |            5.400
+##    RELIG |               60 |            3.000</code></pre>
 <pre><code>## ----------------------------------------------------------------------</code></pre>
 <p>La <a href="métodos-sdc.html#fig:fig8">8.7</a> demuestra el efecto del umbral de <span class="math inline">\(k\)</span>-anonimato requerido y el vector de importancia en la utilidad de los datos utilizando varios indicadores relacionados con el mercado laboral de un conjunto de datos<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a> antes y después de la anonimización. La <a href="métodos-sdc.html#fig:fig8">8.7</a> muestra los cambios relativos como porcentaje del valor inicial después de volver a calcular los indicadores con los datos a los que se aplicó la supresión local. Los indicadores son la proporción de mujeres y hombres activos y el número de mujeres y hombres en edad de trabajar. Los valores calculados a partir de los datos brutos son, respectivamente, 68%, 12%, 8.943 y 9.702. La línea vertical en 0 es el punto de referencia de la ausencia de cambios. Los números indican el umbral de <span class="math inline">\(k\)</span>-anonimato requerido (3 o 5) y los colores indican el vector de importancia: el rojo (sin símbolo) es ningún vector de importancia, el azul (con símbolo <span class="math inline">\(\color {blue}{\text{*}}\)</span>) es de alta importancia en la variable con la información sobre la situación laboral y el verde oscuro (con símbolo <span class="math inline">\(\color {darkgreen}{\text{+}}\)</span>) es de alta importancia en la variable de edad.</p>
 <p>Un umbral de <span class="math inline">\(k\)</span>-anonimato más alto conlleva una mayor pérdida de información (es decir, mayores desviaciones de los valores originales de los indicadores, los 5 están más alejados del punto de referencia de ningún cambio que los correspondientes 3) causada por la supresión local. Reducir el número de supresiones en la variable de situación laboral especificando un vector de importancia no mejora los indicadores. En cambio, reducir el número de supresiones en la edad reduce en gran medida la pérdida de información. Dado que los grupos de edad específicos tienen una gran influencia en el cálculo de estos indicadores (los casos raros se encuentran en los extremos y se suprimirán), los índices de supresión elevados sobre la edad distorsionan los indicadores. En general, es útil comparar las medidas de utilidad (véase la sección <a href="medición-de-la-utilidad-y-la-pérdida-de-información.html#medición-de-la-utilidad-y-la-pérdida-de-información">Medición de la utilidad y la pérdida de información</a>) para especificar el vector de importancia, ya que los efectos pueden ser imprevisibles.</p>
 <div class="figure"><span style="display:block;" id="fig:fig8"></span>
 <img src="Imagenes/image7.png" alt="Cambios en los indicadores del mercado laboral tras la anonimización de los datos de I2D2" width="100%" />
 <p class="caption">
-Figure 8.7: Cambios en los indicadores del mercado laboral tras la anonimización de los datos de I2D2
+Figura 8.7: Cambios en los indicadores del mercado laboral tras la anonimización de los datos de I2D2
 </p>
 </div>
 <p>El umbral de <span class="math inline">\(k\)</span>-anonimato que debe fijarse depende de varios factores, que son, entre otros:</p>
@@ -1500,7 +1501,7 @@ Figure 8.7: Cambios en los indicadores del mercado laboral tras la anonimizació
 <p>La variable edad se recodifica en intervalos de cinco años y tiene 20 categorías de edad. Esta es la variable con el mayor número de categorías. Dar prioridad a la supresión de otras variables conduce a un mayor número total de supresiones y a un mayor tiempo de cálculo.</p>
 <table>
 <caption>
-<span id="tab:Tabla10">Table 8.5: </span>Efecto de los vectores de importancia y umbrales de <span class="math inline">\(k\)</span>-anonimato en el tiempo de ejecución y número total de supresiones
+<span id="tab:Tabla10">Tabla 8.5: </span>Efecto de los vectores de importancia y umbrales de <span class="math inline">\(k\)</span>-anonimato en el tiempo de ejecución y número total de supresiones
 </caption>
 <thead>
 <tr>
@@ -1655,7 +1656,7 @@ variable de edad
 <p>Por lo tanto, es importante evaluar cuidadosamente las medidas de riesgo después de utilizar el enfoque <strong>all-m</strong>.</p>
 <p>En <code>sdcMicro</code> el enfoque <strong>all-m</strong> se implementa en el argumento ‘combs’ de la función <code>localSuppression()</code>. El valor de <strong>m</strong> se especifica en el argumento ‘combs’ y también puede tomar varios valores. Los subconjuntos de diferentes tamaños se utilizan secuencialmente en el algoritmo de supresión local. Por ejemplo, si ‘combs’ se establece como c(3,9), primero se consideran todos los subconjuntos de tamaño 3 y posteriormente todos los subconjuntos de tamaño 9. Establecer el último valor del argumento combs en el número total de variables clave garantiza la consecución del <span class="math inline">\(k\)</span>-anonimato para el conjunto de datos completo. También es posible especificar diferentes valores de k para cada tamaño de subconjunto en el argumento <em>k</em>. Si quisiéramos lograr el anonimato de 5 en los subconjuntos de tamaño 3 y posteriormente el anonimato de 3 en los subconjuntos de tamaño 9, estableceríamos el argumento <em>k</em> como c(5,3). El Bloque <a href="métodos-sdc.html#exm:bloque22jgm">8.8</a> ilustra el uso del enfoque <strong>all-m</strong> en <code>sdcMicro</code>.</p>
 <div class="example">
-<p><span id="exm:bloque22jgm" class="example"><strong>Example 8.8  </strong></span>El enfoque <strong>all-m</strong> en <code>sdcMicro</code></p>
+<p><span id="exm:bloque22jgm" class="example"><strong>Bloque 8.8  </strong></span>El enfoque <strong>all-m</strong> en <code>sdcMicro</code></p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque22jgm) -->
@@ -1669,11 +1670,11 @@ variable de edad
 <pre><code>## Local suppression (applied per strata given by variable(s) strata_region)</code></pre>
 <pre><code>##   KeyVar | Suppressions (#) | Suppressions (%)
 ##  sizeRes |                0 |            0.000
-##   AGEYRS |              494 |           24.700
+##   AGEYRS |              510 |           25.500
 ##   GENDER |                0 |            0.000
 ##   REGION |                0 |            0.000
-##    etnia |               81 |            4.050
-##    RELIG |               66 |            3.300</code></pre>
+##    etnia |               82 |            4.100
+##    RELIG |               52 |            2.600</code></pre>
 <pre><code>## ----------------------------------------------------------------------</code></pre>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="métodos-sdc.html#cb60-1" aria-hidden="true" tabindex="-1"></a>sdcInitial <span class="ot">&lt;-</span> <span class="fu">undolast</span>(sdcInitial)</span>
 <span id="cb60-2"><a href="métodos-sdc.html#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Aplicar k-anonimato con umbral 5 a todos los subconjuntos de tres variables clave y</span></span>
@@ -1683,16 +1684,16 @@ variable de edad
 <pre><code>## Local suppression (applied per strata given by variable(s) strata_region)</code></pre>
 <pre><code>##   KeyVar | Suppressions (#) | Suppressions (%)
 ##  sizeRes |                0 |            0.000
-##   AGEYRS |              393 |           19.650
+##   AGEYRS |              409 |           20.450
 ##   GENDER |                0 |            0.000
 ##   REGION |                0 |            0.000
-##    etnia |               39 |            1.950
-##    RELIG |               39 |            1.950</code></pre>
+##    etnia |               34 |            1.700
+##    RELIG |               52 |            2.600</code></pre>
 <pre><code>## ----------------------------------------------------------------------</code></pre>
 <p>La Tabla <a href="métodos-sdc.html#tab:Tabla11">8.6</a> presenta los resultados de utilizar el enfoque <strong>all-m</strong> de un conjunto de datos de prueba con 9 variables clave y 4.000 registros. La Tabla muestra los argumentos <em>k</em> y “combs” de la función <code>localSuppression()</code>, el número de violaciones de <span class="math inline">\(k\)</span>-anonimato para diferentes niveles de <em>k</em>, así como el número total de supresiones. Observamos que las diferentes combinaciones no siempre conducen al nivel de <span class="math inline">\(k\)</span>-anonimato requerido. Por ejemplo, cuando se establece <em>k=3</em>, y “combs” 3 y 7, todavía hay 15 registros en el conjunto de datos (con un total de 9 identificadores indirectos) que violan el anonimato 3 después de la supresión local. Debido al menor tamaño de la muestra, las ganancias en tiempo de ejecución no son todavía evidentes en este ejemplo, ya que la ejecución del algoritmo varias veces consume tiempo. Un conjunto de datos más grande se beneficiaría más del enfoque <strong>all-m</strong>, ya que el algoritmo tardaría más tiempo.</p>
 <table>
 <caption>
-<span id="tab:Tabla11">Table 8.6: </span>Efecto del enfoque <strong>all-m</strong> en el <span class="math inline">\(k\)</span>-anonimato
+<span id="tab:Tabla11">Tabla 8.6: </span>Efecto del enfoque <strong>all-m</strong> en el <span class="math inline">\(k\)</span>-anonimato
 </caption>
 <thead>
 <tr>
@@ -2082,7 +2083,7 @@ de la local
 </table>
 <p>A menudo el conjunto de datos contiene variables relacionadas con las variables clave utilizadas para la supresión local. Ejemplos de ello son las variables rural/urbano a las regiones en caso de que las regiones sean completamente rurales o urbanas o las variables que solo se responden para categorías específicas (por ejemplo, el sector para los que trabajan, las variables relacionadas con la escolaridad para ciertos rangos de edad). En esos casos, las variables rural/urbana o sector podrían no ser identificadores indirectos en sí mismas, pero podrían permitir al intruso reconstruir valores suprimidos en los identificadores indirectos región o situación laboral. Por ejemplo, si la región 1 es completamente urbana y todas las demás regiones son solo semiurbanas o rurales, una supresión en la variable región para un registro de la región 1 puede reconstruirse simplemente mediante la variable rural/urbana. Por lo tanto, es útil suprimir los valores correspondientes a las supresiones en esas variables vinculadas. El Bloque <a href="métodos-sdc.html#exm:bloque23jgm">8.9</a> ilustra cómo suprimir los valores de la variable “urbrur” correspondientes a las supresiones en la variable región. Todos los valores de “urbrur” que corresponden a un valor suprimido <code>NA</code> en la variable “region” se suprimen (se ponen a <code>NA</code>).</p>
 <div class="example">
-<p><span id="exm:bloque23jgm" class="example"><strong>Example 8.9  </strong></span>Suprimir manualmente los valores de las variables vinculadas.</p>
+<p><span id="exm:bloque23jgm" class="example"><strong>Bloque 8.9  </strong></span>Suprimir manualmente los valores de las variables vinculadas.</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque23jgm) -->
@@ -2092,7 +2093,7 @@ de la local
 <span id="cb64-3"><a href="métodos-sdc.html#cb64-3" aria-hidden="true" tabindex="-1"></a>    <span class="sc">!</span><span class="fu">is.na</span>(sdcInitial<span class="sc">@</span>origData<span class="sc">$</span>region),<span class="st">&#39;sizRes&#39;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code></pre></div>
 <p>Como alternativa, las variables vinculadas pueden especificarse al crear el objeto <code>sdcMicro</code>. Las variables vinculadas se denominan variables “fantasma”. Cualquier supresión en la variable clave conducirá a una supresión en las variables vinculadas a esa variable clave. El Bloque <a href="métodos-sdc.html#exm:bloque24jgm">8.10</a> muestra cómo especificar la vinculación entre “región” y “urbrur” con variables fantasma.</p>
 <div class="example">
-<p><span id="exm:bloque24jgm" class="example"><strong>Example 8.10  </strong></span>Suprimir valores en variables enlazadas especificando variables fantasma</p>
+<p><span id="exm:bloque24jgm" class="example"><strong>Bloque 8.10  </strong></span>Suprimir valores en variables enlazadas especificando variables fantasma</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque24jgm) -->
@@ -2125,7 +2126,7 @@ de la local
 ## 47      1</code></pre>
 <p>La alternativa más sencilla para la función <code>localSuppression()</code> en <code>sdcMicro</code> es la función <code>localSupp()</code>. La función <code>localSupp()</code> puede utilizarse para suprimir los valores de ciertas variables clave de los individuos con riesgos superiores a un determinado umbral. En este caso, se suprimirán todos los valores de la variable especificada para los encuestados con un riesgo superior al umbral especificado. La medida de riesgo utilizada es el riesgo individual (véase la sección <a href="medición-de-riesgos.html#riesgo-individual">Riesgo individual</a>. Esto es útil si una variable tiene valores sensibles que no deben publicarse para los individuos con alto riesgo de reidentificación. Lo que se considera alta probabilidad de reidentificación depende de los requisitos legales. En el siguiente ejemplo, los valores de la variable “educación” se suprimen para todos los individuos cuyo riesgo individual es superior a 0,08, lo que se ilustra en el Bloque <a href="métodos-sdc.html#exm:bloque25jgm">8.11</a>. Para obtener una visión general de los valores de riesgo individuales, puede ser útil observar las estadísticas resumidas de los valores de riesgo individuales, así como el número de supresiones.</p>
 <div class="example">
-<p><span id="exm:bloque25jgm" class="example"><strong>Example 8.11  </strong></span>Aplicación de la función integrada <code>sdcMicro</code> <code>localSupp()</code></p>
+<p><span id="exm:bloque25jgm" class="example"><strong>Bloque 8.11  </strong></span>Aplicación de la función integrada <code>sdcMicro</code> <code>localSupp()</code></p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque25jgm) -->
@@ -2133,7 +2134,7 @@ de la local
 <div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="métodos-sdc.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Estadísticas resumidas</span></span>
 <span id="cb67-2"><a href="métodos-sdc.html#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(sdcInitial<span class="sc">@</span>risk<span class="sc">$</span>individual[,<span class="dv">1</span>])</span></code></pre></div>
 <pre><code>##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
-## 2.067e-05 7.145e-04 2.901e-03 4.771e-03 6.025e-03 8.541e-02</code></pre>
+## 3.371e-05 7.124e-04 3.004e-03 4.893e-03 6.236e-03 8.541e-02</code></pre>
 <div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="métodos-sdc.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Número de individuos con riesgo individual superior al 0,1</span></span>
 <span id="cb69-2"><a href="métodos-sdc.html#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(sdcInitial<span class="sc">@</span>risk<span class="sc">$</span>individual[,<span class="dv">1</span>] <span class="sc">&gt;</span> <span class="fl">0.08</span>)</span></code></pre></div>
 <pre><code>## [1] 2</code></pre>
@@ -2163,7 +2164,7 @@ de la local
 <p>Esto puede verse en la Tabla <a href="métodos-sdc.html#tab:Tabla12">8.7</a>, que muestra los mismos datos antes y después de intercambiar algunos valores. Los valores intercambiados aparecen en cursiva. Tanto antes como después de perturbar los datos, todas las observaciones violan el <span class="math inline">\(k\)</span>-anonimato en el nivel 3 (es decir, cada clave no aparece más de dos veces en el conjunto de datos). No obstante, el riesgo de reidentificación <strong>correcta</strong> de los registros se reduce y, por tanto, es posible que no se revele la información contenida en otras variables (sensibles). Con cierta probabilidad, una coincidencia de los microdatos con un archivo de datos externo será errónea. Por ejemplo, un intruso encontraría un individuo con la combinación {“hombre”, “urbano”, “superior”}, que es una muestra única. Sin embargo, esta coincidencia no es correcta, ya que el conjunto de datos original no contenía ningún individuo con estas características y, por tanto, el individuo coincidente no puede ser una coincidencia correcta. El intruso no puede saber con certeza si la información revelada de otras variables para ese registro es correcta.</p>
 <table>
 <caption>
-<span id="tab:Tabla12">Table 8.7: </span>Efecto del enfoque <strong>all-m</strong> en el <span class="math inline">\(k\)</span>-anonimato
+<span id="tab:Tabla12">Tabla 8.7: </span>Efecto del enfoque <strong>all-m</strong> en el <span class="math inline">\(k\)</span>-anonimato
 </caption>
 <thead>
 <tr>
@@ -2370,7 +2371,7 @@ P =
 <p>Dado que la matriz de transición es conocida por los usuarios finales, hay varias formas de corregir el análisis estadístico de los datos por las distorsiones introducidas por el PRAM.</p>
 <table>
 <caption>
-<span id="tab:Tabla13">Table 8.8: </span>Tabulación de la variable “región” antes y después del PRAM
+<span id="tab:Tabla13">Tabla 8.8: </span>Tabulación de la variable “región” antes y después del PRAM
 </caption>
 <thead>
 <tr>
@@ -2494,7 +2495,7 @@ sdc_respaldo <- sdcHH
 <div id="section" class="section level4 hasAnchor" number="8.3.1.1">
 <h4><span class="header-section-number">8.3.1.1</span> <!-- Ejemplo 5.10--><a href="métodos-sdc.html#section" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="example">
-<p><span id="exm:bloque26jgm" class="example"><strong>Example 8.12  </strong></span>Producción de resultados reproducibles de PRAM utilizando <code>set.seed()</code></p>
+<p><span id="exm:bloque26jgm" class="example"><strong>Bloque 8.12  </strong></span>Producción de resultados reproducibles de PRAM utilizando <code>set.seed()</code></p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque26jgm) -->
@@ -2517,7 +2518,7 @@ sdc_respaldo <- sdcHH
 <p>La Tabla <a href="métodos-sdc.html#tab:Tabla14">8.9</a> muestra la tabulación de la variable después de aplicar el PRAM invariante. Podemos ver que las desviaciones de las tabulaciones iniciales, que tienen expectativa 0, son menores que la matriz de transición que no cumple la propiedad de invariancia. Las desviaciones restantes se deben a la aleatoriedad.</p>
 <table>
 <caption>
-<span id="tab:Tabla14">Table 8.9: </span>Tabulación de la variable “región” antes y después del PRAM (invariante)
+<span id="tab:Tabla14">Tabla 8.9: </span>Tabulación de la variable “región” antes y después del PRAM (invariante)
 </caption>
 <thead>
 <tr>
@@ -2583,7 +2584,7 @@ rural2
 <p>La Tabla <a href="métodos-sdc.html#tab:Tabla15">8.10</a> presenta las tabulaciones cruzadas con la variable sexo. Antes de aplicar PRAM invariante, la proporción de hombres en la ciudad es mucho mayor que la de mujeres (alrededor del 60%). Esta propiedad no se mantiene después de PRAM invariante (los porcentajes de hombres y mujeres en la ciudad son aproximadamente iguales), aunque se mantienen las tabulaciones univariantes. Una solución es aplicar PRAM por separado para los hombres y las mujeres de este ejemplo<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a>. Esto puede hacerse especificando el argumento de los estratos en la función <code>pram()</code> de <code>sdcMicro</code> (véase más adelante).</p>
 <table>
 <caption>
-<span id="tab:Tabla15">Table 8.10: </span>Tabulación cruzada de la variable “región” y la variable “sexo” antes y después del PRAM invariante
+<span id="tab:Tabla15">Tabla 8.10: </span>Tabulación cruzada de la variable “región” y la variable “sexo” antes y después del PRAM invariante
 </caption>
 <thead>
 <tr>
@@ -2680,7 +2681,7 @@ rural2
 <div id="section-1" class="section level4 hasAnchor" number="8.3.1.2">
 <h4><span class="header-section-number">8.3.1.2</span> <!-- Ejemplo 5.11--><a href="métodos-sdc.html#section-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="example">
-<p><span id="exm:bloque27jgm" class="example"><strong>Example 8.13  </strong></span>Selección de variables para aplicar PRAM</p>
+<p><span id="exm:bloque27jgm" class="example"><strong>Bloque 8.13  </strong></span>Selección de variables para aplicar PRAM</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque27jgm) -->
@@ -2700,7 +2701,7 @@ rural2
 <div id="section-2" class="section level4 hasAnchor" number="8.3.1.3">
 <h4><span class="header-section-number">8.3.1.3</span> <!-- Example 5.12 --><a href="métodos-sdc.html#section-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="example">
-<p><span id="exm:bloque28jgm" class="example"><strong>Example 8.14  </strong></span>Especificación de los valores mínimos de la diagonal de la matriz de transición PRAM</p>
+<p><span id="exm:bloque28jgm" class="example"><strong>Bloque 8.14  </strong></span>Especificación de los valores mínimos de la diagonal de la matriz de transición PRAM</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque28jgm) -->
@@ -2726,7 +2727,7 @@ rural2
 <div id="section-3" class="section level4 hasAnchor" number="8.3.1.4">
 <h4><span class="header-section-number">8.3.1.4</span> <!-- Example 5.13 --><a href="métodos-sdc.html#section-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="example">
-<p><span id="exm:bloque29jgm" class="example"><strong>Example 8.15  </strong></span>Minimizar las combinaciones improbables aplicando el PRAM por estratos</p>
+<p><span id="exm:bloque29jgm" class="example"><strong>Bloque 8.15  </strong></span>Minimizar las combinaciones improbables aplicando el PRAM por estratos</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque29jgm) -->
@@ -2765,7 +2766,7 @@ SSE = \sum_{i = 1}^{g}{\sum_{j = 1}^{n_{i}}{\left( x_{ij} - {\overline{x}}_{i} \
 <div id="section-4" class="section level4 hasAnchor" number="8.3.2.1">
 <h4><span class="header-section-number">8.3.2.1</span> <!-- Example 5.14 --><a href="métodos-sdc.html#section-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="example">
-<p><span id="exm:bloque30jgm" class="example"><strong>Example 8.16  </strong></span>Aplicación de la microagregación con la función <code>sdcMicro</code> <code>microaggregation()</code></p>
+<p><span id="exm:bloque30jgm" class="example"><strong>Bloque 8.16  </strong></span>Aplicación de la microagregación con la función <code>sdcMicro</code> <code>microaggregation()</code></p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque30jgm) -->
@@ -2779,7 +2780,7 @@ SSE = \sum_{i = 1}^{g}{\sum_{j = 1}^{n_{i}}{\left( x_{ij} - {\overline{x}}_{i} \
 </blockquote>
 <table>
 <caption>
-<span id="tab:Tabla16">Table 8.11: </span>Ilustración del efecto de la elección de la media frente a la mediana para la microagregación cuando se trata de valores atípicos
+<span id="tab:Tabla16">Tabla 8.11: </span>Ilustración del efecto de la elección de la media frente a la mediana para la microagregación cuando se trata de valores atípicos
 </caption>
 <thead>
 <tr>
@@ -2909,7 +2910,7 @@ Microagregación (mediana)
 <p>La microagregación multivariada se utiliza ampliamente en las estadísticas oficiales <span class="citation">(<a href="#ref-benschop2019statistical" role="doc-biblioref">Benschop, Machingauta, and Welch 2019</a>)</span>. El primer paso de la agregación multivariante es la creación de grupos homogéneos basados en varias variables. Los grupos se forman a partir de las distancias multivariadas entre los individuos. Posteriormente, los valores de todas las variables para todos los miembros del grupo se sustituyen por los mismos valores. La Tabla <a href="métodos-sdc.html#tab:Tabla17">8.12</a> lo ilustra con tres variables. Vemos que la agrupación por ingresos, gastos y patrimonio conduce a una agrupación diferente, como en el caso de la Tabla <a href="métodos-sdc.html#tab:Tabla16">8.11</a>, en la que los grupos se formaron basándose solo en los ingresos.</p>
 <table>
 <caption>
-<span id="tab:Tabla17">Table 8.12: </span>Ilustración de la microagregación multivariante
+<span id="tab:Tabla17">Tabla 8.12: </span>Ilustración de la microagregación multivariante
 </caption>
 <thead>
 <tr>
@@ -3118,7 +3119,7 @@ Patrimonio
 <div id="section-5" class="section level4 hasAnchor" number="8.3.2.2">
 <h4><span class="header-section-number">8.3.2.2</span> <!-- Example 5.15 --><a href="métodos-sdc.html#section-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="example">
-<p><span id="exm:bloque31jgm" class="example"><strong>Example 8.17  </strong></span>Microagregación multivariada con el algoritmo de distancia máxima al vector medio (MDAV) en <code>sdcMicro</code></p>
+<p><span id="exm:bloque31jgm" class="example"><strong>Bloque 8.17  </strong></span>Microagregación multivariada con el algoritmo de distancia máxima al vector medio (MDAV) en <code>sdcMicro</code></p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque31jgm) -->
@@ -3133,7 +3134,7 @@ Patrimonio
 <div id="section-6" class="section level4 hasAnchor" number="8.3.2.3">
 <h4><span class="header-section-number">8.3.2.3</span> <!-- Example 5.16 --><a href="métodos-sdc.html#section-6" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="example">
-<p><span id="exm:bloque32jgm" class="example"><strong>Example 8.18  </strong></span>Especificación de variables de estrato para la microagregación</p>
+<p><span id="exm:bloque32jgm" class="example"><strong>Bloque 8.18  </strong></span>Especificación de variables de estrato para la microagregación</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque32jgm) -->
@@ -3146,7 +3147,7 @@ Patrimonio
 <p>Además del método MDAV, hay algunos otros métodos de agrupación implementados en <code>sdcMicro</code> <span class="citation">(<a href="#ref-TeMK14" role="doc-biblioref">Matthias Templ Bernhard Meindl and Kowarik 2014</a>)</span>. La Tabla <a href="métodos-sdc.html#tab:Tabla18">8.13</a> ofrece un resumen de estos métodos. Mientras que el método “MDAV” utiliza la distancia euclidiana, el método “rmd” utiliza la distancia de Mahalanobis. Una alternativa a estos métodos es la clasificación de los encuestados basada en el primer componente principal (CP), que es la proyección de todas las variables en un espacio unidimensional que maximiza la varianza de esta proyección. El rendimiento de este método depende de la parte de la varianza total de los datos que explica el primer CP. El método “rmd” es más intensivo desde el punto de vista computacional debido al cálculo de las distancias de Mahalanobis, pero proporciona mejores resultados con respecto a la homogeneidad de los grupos. Se recomienda para conjuntos de datos más pequeños <span class="citation">(<a href="#ref-TeMK14" role="doc-biblioref">Matthias Templ Bernhard Meindl and Kowarik 2014</a>)</span>.</p>
 <table>
 <caption>
-<span id="tab:Tabla18">Table 8.13: </span>Métodos de agrupación para la microagregación que son implementados en <code>sdcMicro</code>
+<span id="tab:Tabla18">Tabla 8.13: </span>Métodos de agrupación para la microagregación que son implementados en <code>sdcMicro</code>
 </caption>
 <thead>
 <tr>
@@ -3221,7 +3222,7 @@ la agrupación se basa en el clustering y la agregación se realiza dentro de lo
 <div class="figure"><span style="display:block;" id="fig:fig9"></span>
 <img src="Imagenes/image8.png" alt="Ilustración del efecto de la adición de ruido a los valores atípicos" width="100%" />
 <p class="caption">
-Figure 8.8: Ilustración del efecto de la adición de ruido a los valores atípicos
+Figura 8.8: Ilustración del efecto de la adición de ruido a los valores atípicos
 </p>
 </div>
 <p>Existen varios algoritmos de adición de ruido. La versión más simple de la adición de ruido es el ruido aditivo no correlacionado normalmente distribuido, donde <span class="math inline">\(x_j\)</span>, los valores originales de la variable <span class="math inline">\(j\)</span> son reemplazados por</p>
@@ -3231,7 +3232,7 @@ Figure 8.8: Ilustración del efecto de la adición de ruido a los valores atípi
 <div id="section-7" class="section level4 hasAnchor" number="8.3.3.1">
 <h4><span class="header-section-number">8.3.3.1</span> <!-- Example 5.17 --><a href="métodos-sdc.html#section-7" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="example">
-<p><span id="exm:bloque33jgm" class="example"><strong>Example 8.19  </strong></span>Adición de ruido no correlacionado</p>
+<p><span id="exm:bloque33jgm" class="example"><strong>Bloque 8.19  </strong></span>Adición de ruido no correlacionado</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque33jgm) -->
@@ -3244,7 +3245,7 @@ Figure 8.8: Ilustración del efecto de la adición de ruido a los valores atípi
 <div class="figure"><span style="display:block;" id="fig:fig10"></span>
 <img src="Imagenes/image9.png" alt="Distribución de frecuencias de una variable continua antes y después de la adición de ruido" width="100%" />
 <p class="caption">
-Figure 8.9: Distribución de frecuencias de una variable continua antes y después de la adición de ruido
+Figura 8.9: Distribución de frecuencias de una variable continua antes y después de la adición de ruido
 </p>
 </div>
 <p>La <a href="métodos-sdc.html#fig:fig11">8.10</a> muestra el rango de valores de una variable antes de añadir ruido (sin ruido) y después de añadir varios niveles de ruido (α de 0,1 a 1,5 con incrementos de 0,1). En la figura se representan el valor mínimo, los percentiles 20, 30 y 40, la mediana, los percentiles 60, 70, 80 y 90 y el valor máximo. La mediana (percentil 50) se indica con el símbolo rojo “<span class="math inline">\(\color {red}{\text{+}}\)</span>”. De las <a href="métodos-sdc.html#fig:fig10">8.9</a> y <a href="métodos-sdc.html#fig:fig11">8.10</a> se desprende que el rango de valores se amplía tras la adición de ruido, y que la mediana se mantiene aproximadamente en el mismo nivel, al igual que la media por construcción. Cuanto mayor sea la magnitud del ruido añadido, mayor será el rango de valores. En los casos en que la variable debe permanecer en un determinado rango de valores (por ejemplo, solo valores positivos, entre 0 y 100), esto puede ser una desventaja de la adición de ruido. Por ejemplo, las variables de gasto suelen tener valores no negativos, pero la adición de ruido a estas variables puede generar valores negativos, que son difíciles de interpretar. Una forma de evitar este problema es poner a cero los valores negativos. Sin embargo, este truncamiento de los valores por debajo de un determinado umbral distorsionará la distribución (matriz de media y varianza) de los datos perturbados. Esto significa que las características que se preservaron con la adición de ruido, como la conservación de la media y la matriz de covarianza, se pierden y el usuario, incluso con el conocimiento de la magnitud del ruido, ya no puede utilizar los datos para una estimación coherente.</p>
@@ -3252,7 +3253,7 @@ Figure 8.9: Distribución de frecuencias de una variable continua antes y despu�
 <div class="figure"><span style="display:block;" id="fig:fig11"></span>
 <img src="Imagenes/image10.png" alt="Niveles de ruido y el impacto en el rango de valores (percentiles)" width="100%" />
 <p class="caption">
-Figure 8.10: Niveles de ruido y el impacto en el rango de valores (percentiles)
+Figura 8.10: Niveles de ruido y el impacto en el rango de valores (percentiles)
 </p>
 </div>
 <p>Si se seleccionan dos o más variables para la adición de ruido, se prefiere la adición de ruido correlacionado para preservar la estructura de correlación en los datos. En este caso, la matriz de covarianza del ruido <span class="math inline">\(\Sigma_{\varepsilon}\)</span> es proporcional a la matriz de covarianza de los datos originales <span class="math inline">\(\Sigma_{X}\)</span>:</p>
@@ -3262,7 +3263,7 @@ Figure 8.10: Niveles de ruido y el impacto en el rango de valores (percentiles)
 <div id="section-8" class="section level4 hasAnchor" number="8.3.3.2">
 <h4><span class="header-section-number">8.3.3.2</span> <!--Example 5.18--><a href="métodos-sdc.html#section-8" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="example">
-<p><span id="exm:bloque34jgm" class="example"><strong>Example 8.20  </strong></span>Adición de ruido correlacionado</p>
+<p><span id="exm:bloque34jgm" class="example"><strong>Bloque 8.20  </strong></span>Adición de ruido correlacionado</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque34jgm) -->
@@ -3276,7 +3277,7 @@ Figure 8.10: Niveles de ruido y el impacto en el rango de valores (percentiles)
 <div id="section-9" class="section level4 hasAnchor" number="8.3.3.3">
 <h4><span class="header-section-number">8.3.3.3</span> <!--Example 5.19--><a href="métodos-sdc.html#section-9" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="example">
-<p><span id="exm:bloque35jgm" class="example"><strong>Example 8.21  </strong></span>Adición de ruido para los valores atípicos mediante el método “outdect”</p>
+<p><span id="exm:bloque35jgm" class="example"><strong>Bloque 8.21  </strong></span>Adición de ruido para los valores atípicos mediante el método “outdect”</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque35jgm) -->
@@ -3290,7 +3291,7 @@ Figure 8.10: Niveles de ruido y el impacto en el rango de valores (percentiles)
 <div id="section-10" class="section level4 hasAnchor" number="8.3.3.4">
 <h4><span class="header-section-number">8.3.3.4</span> <!--Example 5.20--><a href="métodos-sdc.html#section-10" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="example">
-<p><span id="exm:bloque36jgm" class="example"><strong>Example 8.22  </strong></span>Adición de ruido a agregados y sus componentes</p>
+<p><span id="exm:bloque36jgm" class="example"><strong>Bloque 8.22  </strong></span>Adición de ruido a agregados y sus componentes</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque36jgm) -->
@@ -3358,7 +3359,7 @@ Figure 8.10: Niveles de ruido y el impacto en el rango de valores (percentiles)
 <div id="section-11" class="section level4 hasAnchor" number="8.3.4.1">
 <h4><span class="header-section-number">8.3.4.1</span> <!--Example 5.21--><a href="métodos-sdc.html#section-11" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="example">
-<p><span id="exm:bloque37jgm" class="example"><strong>Example 8.23  </strong></span>Rank swapping usando <code>sdcMicro</code></p>
+<p><span id="exm:bloque37jgm" class="example"><strong>Bloque 8.23  </strong></span>Rank swapping usando <code>sdcMicro</code></p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque37jgm) -->
@@ -3403,8 +3404,8 @@ Figure 8.10: Niveles de ruido y el impacto en el rango de valores (percentiles)
 ## Disclosure risk is currently between [0.00%; 0.00%]
 ## 
 ## Current Information Loss:
-##   - IL1: 5549147.24
-##   - Difference of Eigenvalues: -5698560648044995.000%
+##   - IL1: 5554707.07
+##   - Difference of Eigenvalues: -5626433946407462.000%
 ## ----------------------------------------------------------------------</code></pre>
 <p>Se ha comprobado que <em>Rank swapping</em> da buenos resultados con respecto al equilibrio entre la pérdida de información y la protección de los datos <span class="citation">(<a href="#ref-DoTo01a" role="doc-biblioref">Josep Domingo-Ferrer and Torra 2001</a>)</span>. <em>Rank swapping</em> no es útil para variables con pocos valores diferentes o muchos valores perdidos, ya que el intercambio en ese caso no dará lugar a valores alterados. Además, si el intruso sabe a quién pertenece el valor más alto o más bajo de una variable específica (por ejemplo, los ingresos), el nivel de esta variable se revelará después de <em>Rank swapping</em>, porque los valores en sí no se alteran y los valores originales se revelan todos. Esto puede resolverse codificando por arriba y por abajo los valores más bajos y/o más altos.</p>
 <blockquote>
@@ -3422,7 +3423,7 @@ Figure 8.10: Niveles de ruido y el impacto en el rango de valores (percentiles)
 <p>El método se explica en detalle en <span class="citation">(<a href="#ref-MuSa06" role="doc-biblioref">Muralidhar and Sarathy 2006</a>)</span>. La idea es clasificar a los individuos en función de sus variables originales. A continuación, se ajusta un modelo de regresión con las variables a proteger como regresores y un conjunto de variables que predicen bien esta variable (es decir, con las que están correlacionadas) como regresores. Este modelo de regresión se utiliza para generar <span class="math inline">\(n\)</span> valores sintéticos (predichos) para cada variable que hay que proteger. Estos valores generados también se ranquean y cada valor original se sustituye por otro valor original con el rango que corresponde al ranking del valor generado. Esto significa que todos los valores originales estarán en los datos. La Tabla <a href="métodos-sdc.html#tab:Tabla19">8.14</a> presenta un ejemplo simplificado del método <em>shuffling</em>. En este ejemplo no se especifican los regresores.</p>
 <table>
 <caption>
-<span id="tab:Tabla19">Table 8.14: </span>Métodos de agrupación para la microagregación que son implementados en <code>sdcMicro</code>
+<span id="tab:Tabla19">Tabla 8.14: </span>Métodos de agrupación para la microagregación que son implementados en <code>sdcMicro</code>
 </caption>
 <thead>
 <tr>
@@ -3653,7 +3654,7 @@ Valores barajados
 <div id="section-12" class="section level4 hasAnchor" number="8.3.5.1">
 <h4><span class="header-section-number">8.3.5.1</span> <!--Example 5.22--><a href="métodos-sdc.html#section-12" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="example">
-<p><span id="exm:bloque38jgm" class="example"><strong>Example 8.24  </strong></span>Shuffling usando una ecuación de regresión especificada</p>
+<p><span id="exm:bloque38jgm" class="example"><strong>Bloque 8.24  </strong></span>Shuffling usando una ecuación de regresión especificada</p>
 </div>
 <!-- \begin{equation} -->
 <!-- (\#eq:bloque38jgm) -->
@@ -3707,7 +3708,7 @@ Valores barajados
 <h2><span class="header-section-number">8.5</span> Resumen de métodos SDC<a href="métodos-sdc.html#resumen-de-métodos-sdc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <table>
 <caption>
-<span id="tab:Tablaxx">Table 8.15: </span>Métodos de agrupación para la microagregación que son implementados en <code>sdcMicro</code>
+<span id="tab:Tablaxx">Tabla 8.15: </span>Métodos de agrupación para la microagregación que son implementados en <code>sdcMicro</code>
 </caption>
 <thead>
 <tr>
@@ -4021,7 +4022,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/main/04-application.Rmd",
+"link": "https://github.com/ajusteestacionaline/taller/edit/main/04-application.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -4029,10 +4030,10 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/main/04-application.Rmd",
+"link": "https://github.com/ajusteestacionaline/taller/blob/main/04-application.Rmd",
 "text": null
 },
-"download": null,
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
 "search": {
 "engine": "fuse",
 "options": null
