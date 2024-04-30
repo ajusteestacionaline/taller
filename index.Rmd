@@ -1,5 +1,5 @@
 --- 
-title:  Ajuste estacional de datos de series temporales económicas y sociales
+title:  Ajuste Estacional de Series Temporales Económicas y Sociales
 author: "Subdepartamento de Investigación Estadística"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -22,27 +22,7 @@ apple-touch-icon-size: 120
 
 
 # Prefacio
-Los datos son un recurso valioso que proporciona información crítica para estadísticos, científicos sociales y científicos de datos. Estos datos se utilizan para generar perspectivas detalladas y oportunas que responden a las necesidades de información de una amplia gama de partes interesadas.
-
-En un mundo donde cada vez más grandes volúmenes de datos provienen de un número creciente de proveedores, las Oficinas Nacionales de Estadística (ONE) están utilizando enfoques innovadores para mantener estándares y definiciones de datos, sistemas de gestión de privacidad y confidencialidad, e intercambio responsable de datos.
-
-Las ONE tienen un papel de liderazgo que desempeñar en el establecimiento de formas seguras y transparentes de compartir datos, experiencias y mejores prácticas para respaldar el uso de datos con fines de prueba, evaluación, educación y desarrollo. En ese sentido, la teoria detras del ajuste estacional en series de tiempo es clave. 
+ 
 
 ## Citar este documento
-
-Si decide utilizar este material @guia_sdc_ine, le pedimos que lo cite adecuadamente. En ese caso, ponemos a su disposición el código LaTeX para que pueda incluirlo en las referencias de su documento.
-
-```{r, echo=TRUE, eval=FALSE}
-@misc{guia_sdc_ine,
-  title = {Guía para el Control de la Divulgación Estadística: Taller práctico},
-  author = {{González, Jonathan,  José Bustos, Julio Guerrero, Lissete Bastías and Nicolas Berhó}},
-  organization = {Instituto Nacional de Estadísticas},
-  address = {Santiago, Chile},
-  year = {2021},
-  url = {https://sdcchile.github.io/tallersdc/}
-  }
-
-```
-
-
 
